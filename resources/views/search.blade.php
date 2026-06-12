@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', ($query ? $query . ' — ' : '') . 'Search — VisitKhmer')
+@section('title', ($query ? $query . ' — ' : '') . 'Search — CamboTrips')
 @section('meta_description', 'Search for destinations, temples, beaches, mountains and more across Cambodia.')
 
 @section('content')

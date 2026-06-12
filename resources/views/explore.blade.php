@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Explore Cambodia — VisitKhmer')
+@section('title', 'Explore Cambodia — CamboTrips')
 @section('meta_description', 'Explore curated and popular destinations across Cambodia. Filter by tags to find your perfect adventure.')
 
 @section('content')

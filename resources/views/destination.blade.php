@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Destination — VisitKhmer')
+@section('title', 'Destination — CamboTrips')
 
 @section('meta_description', 'Explore Cambodia\'s rich provinces — from ancient temples in the north to relaxing beaches in the south.')
 

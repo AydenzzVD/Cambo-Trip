@@ -55,7 +55,7 @@ class AuthController extends Controller
         Auth::login($user);
 
         return redirect()->route('home')
-            ->with('success', 'Account created successfully! 🎉 Welcome to VisitKhmer.');
+            ->with('success', 'Account created successfully! 🎉 Welcome to CamboTrips.');
     }
 
     public function logout(Request $request)

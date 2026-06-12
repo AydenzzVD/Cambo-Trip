@@ -100,6 +100,13 @@ button { cursor: pointer; font-family: var(--font-main); border: none; outline: 
   font-size: 1.4rem;
 }
 
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .nav-links {
   display: flex;
   align-items: center;

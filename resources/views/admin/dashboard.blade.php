@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Dashboard — VisitKhmer')
+@section('title', 'Admin Dashboard — CamboTrips')
 
 @section('content')
   <div class="header-bar">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@yield('title', 'VisitKhmer — Welcome to the Kingdom of Wonder')</title>
+  <title>@yield('title', 'CamboTrips — Welcome to the Kingdom of Wonder')</title>
   <meta name="description" content="@yield('meta_description', 'Discover Cambodia\'s most breathtaking destinations. Temples, islands, waterfalls, mountains and more await you in the Kingdom of Wonder.')" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   @yield('styles')
@@ -14,10 +14,8 @@
   <div id="navbar-placeholder">
     <nav class="navbar" id="navbar">
       <a href="{{ route('home') }}" class="nav-logo">
-        <div class="logo-circle">
-          <span class="logo-icon">🏛️</span>
-        </div>
-        <span class="logo-text">VisitKhmer</span>
+        <img src="{{ asset('images/logo.png') }}" alt="CamboTrips Logo" class="logo-img" />
+        <span class="logo-text">CamboTrips</span>
       </a>
       <div class="nav-links">
         <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Home</a>
@@ -54,7 +52,7 @@
     <footer class="footer">
       <span><a href="#">About</a></span>
       <span><a href="#">Contact</a></span>
-      <span>@Copyright VisitKhmer 2025</span>
+      <span>@Copyright CamboTrips 2025</span>
     </footer>
   </div>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up — VisitKhmer</title>
-  <meta name="description" content="Create your free VisitKhmer account to review destinations and join the Cambodia travel community." />
+  <title>Sign Up — CamboTrips</title>
+  <meta name="description" content="Create your free CamboTrips account to review destinations and join the Cambodia travel community." />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
 <body>
@@ -29,7 +29,7 @@
           </a>
         </div>
         <h1 class="auth-title">Create Account</h1>
-        <p class="auth-subtitle">Join the VisitKhmer community</p>
+        <p class="auth-subtitle">Join the CamboTrips community</p>
 
         @if(session('error'))
           <div style="background: #FEF2F2; border: 1px solid #FECACA; color: #DC2626; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; margin-bottom: 18px; text-align: center;">

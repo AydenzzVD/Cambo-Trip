@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $province->name . ' — VisitKhmer')
+@section('title', $province->name . ' — CamboTrips')
 
 @section('content')
   <!-- Province Banner -->

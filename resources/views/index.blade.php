@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'VisitKhmer — Welcome to the Kingdom of Wonder')
+@section('title', 'CamboTrips — Welcome to the Kingdom of Wonder')
 
 @section('content')
   <!-- Hero Section -->

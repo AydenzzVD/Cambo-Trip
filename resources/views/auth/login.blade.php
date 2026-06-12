@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login — VisitKhmer</title>
-  <meta name="description" content="Log in to your VisitKhmer account to leave reviews and save your favorite destinations." />
+  <title>Login — CamboTrips</title>
+  <meta name="description" content="Log in to your CamboTrips account to leave reviews and save your favorite destinations." />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
 <body>

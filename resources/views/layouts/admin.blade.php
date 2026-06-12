@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@yield('title', 'Admin Dashboard — VisitKhmer')</title>
+  <title>@yield('title', 'Admin Dashboard — CamboTrips')</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -81,6 +81,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 50%;
+    }
+
+    .logo-img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
       border-radius: 50%;
     }
 
@@ -457,8 +464,8 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="logo-icon">🏛️</div>
-      <div class="logo-text">VisitKhmer</div>
+      <img src="{{ asset('images/logo.png') }}" alt="CamboTrips Logo" class="logo-img" />
+      <div class="logo-text">CamboTrips</div>
     </div>
     
     <ul class="sidebar-menu">

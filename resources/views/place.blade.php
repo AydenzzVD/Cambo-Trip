@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $place->name . ' — VisitKhmer')
+@section('title', $place->name . ' — CamboTrips')
 @section('meta_description', $place->tagline ?? 'Discover ' . $place->name . ' in Cambodia')
 
 @section('content')

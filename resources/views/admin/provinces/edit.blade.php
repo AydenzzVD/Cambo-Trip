@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Province — VisitKhmer')
+@section('title', 'Edit Province — CamboTrips')
 
 @section('content')
   <div class="header-bar">
