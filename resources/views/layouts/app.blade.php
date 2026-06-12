@@ -25,8 +25,11 @@
         <a href="{{ route('explore') }}" class="nav-link {{ Route::is('explore') ? 'active' : '' }}">Explore</a>
         <a href="{{ route('search') }}" class="nav-link {{ Route::is('search') ? 'active' : '' }}">Search</a>
       </div>
-      <div class="nav-actions">
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 10px;">
         @auth
+          @if(auth()->user()->is_admin)
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-outline" style="border-color: var(--color-accent2); color: var(--color-accent2); font-weight: 600;">🛠️ Admin Panel</a>
+          @endif
           <span class="user-name" style="font-weight: 500; font-size: 0.9rem; color: var(--color-dark); margin-right: 12px; display: inline-block;">👋 {{ auth()->user()->name }}</span>
           <form action="{{ route('logout') }}" method="POST" style="display: inline;">
             @csrf

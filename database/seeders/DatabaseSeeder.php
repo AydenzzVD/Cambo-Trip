@@ -23,6 +23,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
+        User::factory()->create([
+            'name' => 'Administrator',
+            'email' => 'admin@visitkhmer.com',
+            'password' => bcrypt('password'),
+            'is_admin' => true,
+        ]);
+
         $this->call(TravelDataSeeder::class);
     }
 }

@@ -28,3 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::post('/place/{id}/review', [PlaceController::class, 'storeReview'])->name('reviews.store');
 });
+
+// Admin routes group
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('provinces', App\Http\Controllers\Admin\ProvinceController::class)->except(['show']);
+    Route::resource('places', App\Http\Controllers\Admin\PlaceController::class)->except(['show']);
+    Route::resource('tags', App\Http\Controllers\Admin\TagController::class)->except(['show']);
+    Route::resource('reviews', App\Http\Controllers\Admin\ReviewController::class)->only(['index', 'destroy']);
+});
