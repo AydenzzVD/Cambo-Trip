@@ -5,9 +5,12 @@
 
 @section('content')
   <!-- Explore Header -->
-  <div class="section" style="text-align: center; padding-bottom: 16px;">
-    <h1 class="section-title" style="font-size: 2rem; text-decoration: none; margin-bottom: 10px;">Explore Cambodia</h1>
-    <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto;">Discover hidden gems, iconic landmarks, and unforgettable experiences across the Kingdom of Wonder.</p>
+  <div class="hero">
+    <img class="hero-img" src="https://www.image2url.com/r2/default/images/1781278995347-d7bcd9f1-1793-4248-aa58-650194368acd.png" alt="Explore Cambodia" />
+    <div class="hero-overlay">
+      <h1 class="hero-title">Explore Cambodia</h1>
+      <p class="hero-subtitle">Discover hidden gems, iconic landmarks, and unforgettable experiences across the Kingdom of Wonder.</p>
+    </div>
   </div>
 
   <!-- Tag Filter Chips -->
