@@ -1,0 +1,930 @@
+{
+  "provinces": [
+    {
+      "id": "siem-reap",
+      "name": "Siem Reap",
+      "tagline": "An Eco-Tourism and Cultural Heritage Escape",
+      "description": "Siem Reap is the historic heart of the Khmer Empire (9th–15th centuries) and a land named to commemorate a 15th-century victory over Siamese forces. This region served as a majestic civilization center, leaving behind world-class heritage sites like Angkor Wat and the Bayon Temple. Today, it stands as Cambodia's premier travel destination and the ultimate symbol of the nation's soul.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Angkor_Wat_2013.jpg/1280px-Angkor_Wat_2013.jpg",
+      "sections": {
+        "historical": [
+          "angkor-wat",
+          "bayon-temple",
+          "ta-prohm-temple"
+        ],
+        "culture": [
+          "kampong-phluk",
+          "fair-trade-village",
+          "phnom-krom"
+        ],
+        "nature": [
+          "kulen-mountain",
+          "phnom-bok-temple",
+          "zipline-angkor"
+        ],
+        "night": [
+          "pub-street"
+        ]
+      }
+    },
+    {
+      "id": "kampot",
+      "name": "Kampot",
+      "tagline": "A Riverside, Mountain, and Coastal Retreat — Home of Kampot Pepper and Salt",
+      "description": "A riverside province famous for world-class Kampot pepper, colonial architecture, and relaxed countryside views. Kampot sits along the Preaek Tuek Chhu River and is the perfect slow-travel escape.",
+      "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
+      "sections": {
+        "historical": [
+          "bokor-mountain"
+        ],
+        "culture": [
+          "kampot-old-town"
+        ],
+        "nature": [
+          "kep-national-park",
+          "tatai-waterfall"
+        ],
+        "night": []
+      }
+    },
+    {
+      "id": "kep",
+      "name": "Kep",
+      "tagline": "A Coastal Charm and Historical Seaside Escapade — Home of Crab and Pepper",
+      "description": "A quiet coastal retreat known for fresh seafood, especially Kep crab, and peaceful beaches. Once a French colonial resort town, Kep offers a unique blend of history and tranquility.",
+      "image": "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=1200&q=80",
+      "sections": {
+        "historical": [],
+        "culture": [
+          "kep-crab-market"
+        ],
+        "nature": [
+          "kep-national-park",
+          "koh-tonsay"
+        ],
+        "night": []
+      }
+    },
+    {
+      "id": "sihanoukville",
+      "name": "Sihanoukville",
+      "tagline": "A Vibrant Gateway and Pristine Island Escape — Home of Islands and Port",
+      "description": "A cultural hub with well-preserved French colonial buildings, local art, and the unique Bamboo Train experience. Sihanoukville is also the gateway to Cambodia's most stunning tropical islands.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Otres_beach.jpg/1280px-Otres_beach.jpg",
+      "sections": {
+        "historical": [],
+        "culture": [],
+        "nature": [
+          "koh-rong",
+          "koh-tonsay"
+        ],
+        "night": []
+      }
+    },
+    {
+      "id": "mondulkiri",
+      "name": "Mondulkiri",
+      "tagline": "An Eco-Tourism Escape to the Mountains",
+      "description": "A mountainous province known for cool climate, rolling hills, waterfalls, and eco-tourism experiences with elephants and indigenous Bunong culture.",
+      "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80",
+      "sections": {
+        "historical": [],
+        "culture": [
+          "bunong-village"
+        ],
+        "nature": [
+          "bousra-waterfall",
+          "dak-dam-waterfall",
+          "elephant-valley"
+        ],
+        "night": []
+      }
+    },
+    {
+      "id": "koh-kong",
+      "name": "Koh Kong",
+      "tagline": "A Nature and Adventure Eco-Escape",
+      "description": "A nature-rich destination featuring dense rainforests, eco-tourism, and access to the Cardamom Mountains. Koh Kong is ideal for adventure seekers and nature lovers.",
+      "image": "https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=1200&q=80",
+      "sections": {
+        "historical": [],
+        "culture": [],
+        "nature": [
+          "tatai-waterfall",
+          "koh-kong-krav",
+          "cardamom-mountains"
+        ],
+        "night": []
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "angkor-wat",
+      "name": "Angkor Wat",
+      "province": "siem-reap",
+      "tags": [
+        "Temple",
+        "History",
+        "Culture"
+      ],
+      "tagline": "Iconic ancient temple complex famous for its grand Khmer architecture, intricate carvings, and breathtaking sunrise views.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Angkor_Wat_2013.jpg/1280px-Angkor_Wat_2013.jpg",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Cultural visits, sightseeing, historical sightseeing",
+        "activities": "Temple exploration, sunrise watching, photography, cycling tours, guided literary tours, and ancient exploration",
+        "budget": "From low to Medium"
+      },
+      "about": "Angkor Wat is a 12th-century temple complex and the largest religious monument in the world. Originally built as a Hindu temple, it later became a Buddhist site. Known for its iconic five towers and detailed carvings, it stands as a symbol of Cambodia's history and culture.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Angkor_wat_temple.jpg/800px-Angkor_wat_temple.jpg",
+      "thingsToDo": [
+        "Watch sunrise over the temple",
+        "Explore the main temple and surrounding ruins",
+        "Admire detailed bas-relief carvings",
+        "Take photos of the iconic towers and reflections",
+        "Cycle around the Angkor complex",
+        "Join a guided historical tour",
+        "Experience local culture (monk blessings, nearby villages)"
+      ],
+      "mapLink": "https://maps.google.com/?q=Angkor+Wat,+Siem+Reap",
+      "food": [
+        {
+          "name": "Amok Fish",
+          "image": "https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80",
+          "desc": "A traditional Khmer curry made with fish in coconut milk, cooked in banana leaves. Sweet, creamy, and aromatic."
+        },
+        {
+          "name": "Lok Lak",
+          "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80",
+          "desc": "A popular stir-fried dish with marinated beef or chicken served over rice, topped with a fried egg."
+        },
+        {
+          "name": "Nom Banh Chok",
+          "image": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&q=80",
+          "desc": "Coconut milk noodles from young coconut served chilled, known for its fresh hydration and refreshing taste."
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Khmer Retreat",
+          "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80",
+          "price": "$40 – $60/night"
+        },
+        {
+          "name": "Angkor Palace Resort",
+          "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80",
+          "price": "$90 – $150/night"
+        },
+        {
+          "name": "Heritage Suites Hotel",
+          "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=400&q=80",
+          "price": "$75 – $95/night"
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Mahob Khmer",
+          "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80"
+        },
+        {
+          "name": "Cuisine Wat Damnak",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80"
+        },
+        {
+          "name": "Traditional BBQ",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80"
+        }
+      ]
+    },
+    {
+      "id": "bayon-temple",
+      "name": "Bayon Temple",
+      "province": "siem-reap",
+      "tags": [
+        "Temple",
+        "History",
+        "Culture"
+      ],
+      "tagline": "The smiling face temple at the heart of Angkor Thom — a surreal forest of stone faces.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayon_Angkor_Thom_3.jpg/1280px-Bayon_Angkor_Thom_3.jpg",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Photography, History",
+        "activities": "Temple tours, photography, guided walks",
+        "budget": "Low"
+      },
+      "about": "Bayon is a richly decorated Khmer temple at Angkor Thom, built in the late 12th or early 13th century. Its most distinctive feature is the multitude of serene and smiling stone faces on the many towers.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bayon_Angkor_Thom_3.jpg/800px-Bayon_Angkor_Thom_3.jpg",
+      "thingsToDo": [
+        "Walk among the 216 giant stone faces",
+        "Explore the bas-reliefs depicting historical battles",
+        "Join a sunrise photo tour"
+      ],
+      "mapLink": "https://maps.google.com/?q=Bayon+Temple,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "ta-prohm-temple",
+      "name": "Ta Prohm Temple",
+      "province": "siem-reap",
+      "tags": [
+        "Temple",
+        "Nature",
+        "History"
+      ],
+      "tagline": "Where ancient stone meets the jungle — roots and ruins intertwined.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ta_Prohm_Angkor_Cambodia.jpg/1280px-Ta_Prohm_Angkor_Cambodia.jpg",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Nature, Photography",
+        "activities": "Temple exploration, photography",
+        "budget": "Low"
+      },
+      "about": "Ta Prohm is famous for the trees growing out of its ruins and for being one of the filming locations of Lara Croft: Tomb Raider. It gives a sense of what Angkor was like when European explorers first encountered it.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ta_Prohm_Angkor_Cambodia.jpg/800px-Ta_Prohm_Angkor_Cambodia.jpg",
+      "thingsToDo": [
+        "Explore tree-covered ruins",
+        "Photography of roots and rock",
+        "Guided jungle temple tour"
+      ],
+      "mapLink": "https://maps.google.com/?q=Ta+Prohm+Temple,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "zipline-angkor",
+      "name": "Zipline Ride in Angkor Jungle",
+      "province": "siem-reap",
+      "tags": [
+        "Adventure",
+        "Nature"
+      ],
+      "tagline": "An adventurous hilltop sanctuary offering 360-degree views of the Angkor plains.",
+      "image": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Adventure, Thrill",
+        "activities": "Zipline, canopy walk, bird watching",
+        "budget": "Medium"
+      },
+      "about": "Experience the thrill of ziplining above the Angkor jungle canopy. This eco-adventure offers breathtaking bird's-eye views of ancient temple ruins and the forested plains of Siem Reap.",
+      "aboutImage": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=600&q=80",
+      "thingsToDo": [
+        "Zipline over the jungle",
+        "Canopy walk",
+        "Spot wildlife from above"
+      ],
+      "mapLink": "https://maps.google.com/?q=Zipline+Angkor+Jungle,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "kulen-mountain",
+      "name": "Kulen Mountain National Park",
+      "province": "siem-reap",
+      "tags": [
+        "Nature",
+        "History",
+        "Hiking"
+      ],
+      "tagline": "The birthplace of the ancient Khmer Empire — sacred mountain with waterfalls and carved riverbeds.",
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Nature, Hiking, Pilgrimage",
+        "activities": "Hiking, waterfall swimming, visiting reclining Buddha",
+        "budget": "Low"
+      },
+      "about": "Kulen Mountain is considered sacred by Cambodians as the birthplace of the Khmer Empire. The mountain features a reclining Buddha carved from sandstone, hundreds of lingas carved into the river bed, and a beautiful waterfall.",
+      "aboutImage": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80",
+      "thingsToDo": [
+        "Visit the giant reclining Buddha",
+        "Swim at the waterfall",
+        "See the 1000 lingas riverbed"
+      ],
+      "mapLink": "https://maps.google.com/?q=Kulen+Mountain+National+Park",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "phnom-bok-temple",
+      "name": "Phnom Bok Temple",
+      "province": "siem-reap",
+      "tags": [
+        "Temple",
+        "Adventure",
+        "History"
+      ],
+      "tagline": "An adventurous hilltop sanctuary offering 360-degree views of the Angkor plains.",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Adventure, Photography",
+        "activities": "Hiking, temple visit, panoramic views",
+        "budget": "Low"
+      },
+      "about": "Phnom Bok is a hilltop temple featuring three towers dedicated to Shiva, Vishnu, and Brahma. The climb rewards visitors with sweeping views of the Cambodian plains and a sense of remote discovery.",
+      "aboutImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80",
+      "thingsToDo": [
+        "Hike to the hilltop temple",
+        "360° panoramic views",
+        "Photography of ancient towers"
+      ],
+      "mapLink": "https://maps.google.com/?q=Phnom+Bok+Temple,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "kampong-phluk",
+      "name": "Kampong Phluk Floating Village",
+      "province": "siem-reap",
+      "tags": [
+        "Culture",
+        "Nature",
+        "Local"
+      ],
+      "tagline": "A living floating village on the Tonle Sap lake — a unique way of life.",
+      "image": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Culture, Local life",
+        "activities": "Boat tour, village visit, birdwatching",
+        "budget": "Low"
+      },
+      "about": "Kampong Phluk is a cluster of three villages on the Tonle Sap lake. Houses are built on stilts up to 6 meters high, and the village has a school, temple, and market all floating on the water.",
+      "aboutImage": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80",
+      "thingsToDo": [
+        "Boat tour through floating village",
+        "Visit the flooded mangrove forest",
+        "Interact with local fishermen"
+      ],
+      "mapLink": "https://maps.google.com/?q=Kampong+Phluk,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "bokor-mountain",
+      "name": "Bokor Mountain",
+      "province": "kampot",
+      "tags": [
+        "History",
+        "Nature",
+        "Mountain"
+      ],
+      "tagline": "Historical 'ghost city' in the clouds — 1920s French colonial ruins, cool climate, and eerie landscapes.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Bokor_Hill_Station.jpg/1280px-Bokor_Hill_Station.jpg",
+      "quickInfo": {
+        "location": "Kampot",
+        "bestFor": "History, Hiking, Photography",
+        "activities": "Ruins exploration, scenic drive, waterfall visit",
+        "budget": "Low"
+      },
+      "about": "Bokor Hill Station is an abandoned French colonial resort perched at 1,079m on Bokor Mountain. The eerie ghost town with its fog-covered ruins is one of Cambodia's most atmospheric experiences, now also hosting a modern casino resort.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Bokor_Hill_Station.jpg/800px-Bokor_Hill_Station.jpg",
+      "thingsToDo": [
+        "Explore the old French hill station ruins",
+        "Visit Popokvil Waterfall",
+        "Scenic mountain drive",
+        "See the black palace and old church"
+      ],
+      "mapLink": "https://maps.google.com/?q=Bokor+Mountain,+Kampot",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "tatai-waterfall",
+      "name": "Tatai Waterfall",
+      "province": "koh-kong",
+      "tags": [
+        "WaterFall",
+        "Nature",
+        "Adventure"
+      ],
+      "tagline": "Experience the majestic 'Niagara of Cambodia' — pure mountain water cascades over massive rocks into a refreshing jungle paradise.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tatai_waterfall.jpg/1280px-Tatai_waterfall.jpg",
+      "quickInfo": {
+        "location": "Koh Kong",
+        "bestFor": "Nature, Swimming, Adventure",
+        "activities": "Swimming, kayaking, jungle trekking",
+        "budget": "Low"
+      },
+      "about": "Tatai Waterfall is a stunning cascade on the Tatai River in Koh Kong province. Surrounded by lush jungle and clear water, it's the perfect spot for a refreshing swim in nature.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tatai_waterfall.jpg/800px-Tatai_waterfall.jpg",
+      "thingsToDo": [
+        "Swim at the waterfall base",
+        "Kayak on Tatai River",
+        "Trek through jungle trails",
+        "Sunset boat tour"
+      ],
+      "mapLink": "https://maps.google.com/?q=Tatai+Waterfall,+Koh+Kong",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "koh-rong",
+      "name": "Koh Rong",
+      "province": "sihanoukville",
+      "tags": [
+        "Island",
+        "Beach",
+        "Relaxation"
+      ],
+      "tagline": "The crown jewel of Cambodia's islands — 40km of white-sand beaches, turquoise waters, vibrant nightlife and total serenity.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Koh_Rong_beach.jpg/1280px-Koh_Rong_beach.jpg",
+      "quickInfo": {
+        "location": "Sihanoukville",
+        "bestFor": "Beach, Island, Relaxation",
+        "activities": "Snorkeling, diving, beach parties, kayaking",
+        "budget": "Low to Medium"
+      },
+      "about": "Koh Rong is Cambodia's second largest island and one of Southeast Asia's most stunning tropical escapes. With 43km of coastline and 23 beaches, it offers party-goers the Koh Touch beach strip and seekers of serenity the quiet Long Set Beach.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Koh_Rong_beach.jpg/800px-Koh_Rong_beach.jpg",
+      "thingsToDo": [
+        "Snorkel in crystal clear waters",
+        "Watch bioluminescent plankton at night",
+        "Hike jungle trails",
+        "Rent a kayak",
+        "Beach bonfire"
+      ],
+      "mapLink": "https://maps.google.com/?q=Koh+Rong,+Cambodia",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "koh-tonsay",
+      "name": "Koh Tonsay (Rabbit Island)",
+      "province": "kep",
+      "tags": [
+        "Island",
+        "Beach",
+        "Relaxation",
+        "Local"
+      ],
+      "tagline": "Iconic peaceful tropical island famous for its white sand beaches and fresh seafood dining.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Koh_Tonsay_Cambodia.jpg/1280px-Koh_Tonsay_Cambodia.jpg",
+      "quickInfo": {
+        "location": "Kep",
+        "bestFor": "Relaxation, Seafood, Island escape",
+        "activities": "Snorkeling, beach relaxation, fishing",
+        "budget": "Low"
+      },
+      "about": "Koh Tonsay, or Rabbit Island, is a small paradise just a 20-minute boat ride from Kep. With a handful of bamboo bungalows, no electricity after dark, and incredible fresh seafood, it's a true off-grid tropical escape.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Koh_Tonsay_Cambodia.jpg/800px-Koh_Tonsay_Cambodia.jpg",
+      "thingsToDo": [
+        "Relax on the beach",
+        "Snorkel the coral reef",
+        "Eat fresh crab and grilled fish",
+        "Sunset boat ride"
+      ],
+      "mapLink": "https://maps.google.com/?q=Koh+Tonsay,+Kep",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "koh-kong-krav",
+      "name": "Koh Kong Krav",
+      "province": "koh-kong",
+      "tags": [
+        "Island",
+        "Beach",
+        "Nature",
+        "Adventure"
+      ],
+      "tagline": "An untouched island sanctuary — seven secluded beaches, emerald lagoons, and majestic coastal cliffs.",
+      "image": "https://images.unsplash.com/photo-1542259009477-d625272157b7?w=1400&q=80",
+      "quickInfo": {
+        "location": "Koh Kong",
+        "bestFor": "Adventure, Nature, Off-the-beaten-path",
+        "activities": "Island hopping, snorkeling, jungle trek",
+        "budget": "Low"
+      },
+      "about": "Koh Kong Krav is Cambodia's hidden gem — a pristine uninhabited island featuring seven white-sand beaches, emerald lagoons, crystal-clear turquoise waters, and majestic coastal cliffs. A perfect off-the-beaten-path escape for true nature lovers.",
+      "aboutImage": "https://images.unsplash.com/photo-1542259009477-d625272157b7?w=600&q=80",
+      "thingsToDo": [
+        "Island hopping by boat",
+        "Snorkel in turquoise lagoons",
+        "Hike coastal cliffs",
+        "Picnic on deserted beaches"
+      ],
+      "mapLink": "https://maps.google.com/?q=Koh+Kong+Krav,+Cambodia",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "bousra-waterfall",
+      "name": "Bousra Waterfall",
+      "province": "mondulkiri",
+      "tags": [
+        "WaterFall",
+        "Nature",
+        "Hiking"
+      ],
+      "tagline": "A stunning three-level cascade and the pride of Mondulkiri — powerful flow, lush jungle setting, refreshing swimming spots.",
+      "image": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1400&q=80",
+      "quickInfo": {
+        "location": "Mondulkiri",
+        "bestFor": "Nature, WaterFall, Hiking",
+        "activities": "Swimming, hiking, picnicking",
+        "budget": "Low"
+      },
+      "about": "Bousra Waterfall is a magnificent three-tiered waterfall in Mondulkiri province. Surrounded by lush evergreen forest, the falls cascade down into natural pools ideal for swimming. It's one of Cambodia's most impressive natural attractions.",
+      "aboutImage": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&q=80",
+      "thingsToDo": [
+        "Swim in the natural pools",
+        "Hike all three tiers",
+        "Picnic in the jungle",
+        "Bird watching"
+      ],
+      "mapLink": "https://maps.google.com/?q=Bousra+Waterfall,+Mondulkiri",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "dak-dam-waterfall",
+      "name": "Dak Dam Waterfall",
+      "province": "mondulkiri",
+      "tags": [
+        "WaterFall",
+        "Nature",
+        "Hiking"
+      ],
+      "tagline": "A tall waterfall in a serene forested mountain area with large trees, cool and clear water — ideal for hiking and picnicking.",
+      "image": "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?w=1400&q=80",
+      "quickInfo": {
+        "location": "Mondulkiri",
+        "bestFor": "Nature, Adventure",
+        "activities": "Hiking, picnicking, swimming",
+        "budget": "Low"
+      },
+      "about": "Dak Dam Waterfall is nestled in the highland forests of Mondulkiri. The tall, powerful cascade flows into a clear, cool pool surrounded by ancient trees — a perfect hidden retreat for nature and hiking enthusiasts.",
+      "aboutImage": "https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?w=600&q=80",
+      "thingsToDo": [
+        "Hike through highland forest",
+        "Swim in the cool cascade pool",
+        "Picnic by the falls"
+      ],
+      "mapLink": "https://maps.google.com/?q=Dak+Dam+Waterfall,+Mondulkiri",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "king-island",
+      "name": "King Island (Koh Sdach)",
+      "province": "koh-kong",
+      "tags": [
+        "Island",
+        "Culture",
+        "Local",
+        "Relaxation"
+      ],
+      "tagline": "Step into a living piece of Cambodian history — ancient legends of royalty meet a resilient fishing community.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Koh_sdach_island.jpg/1280px-Koh_sdach_island.jpg",
+      "quickInfo": {
+        "location": "Koh Kong",
+        "bestFor": "Culture, Relaxation, Local Life",
+        "activities": "Village visit, snorkeling, beach relaxation",
+        "budget": "Low"
+      },
+      "about": "Koh Sdach (King Island) is a charming fishing community island in Koh Kong. Named after a legendary Cambodian king, it offers visitors an authentic glimpse into local island life, with fresh seafood and a handful of guesthouses.",
+      "aboutImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Koh_sdach_island.jpg/800px-Koh_sdach_island.jpg",
+      "thingsToDo": [
+        "Visit local fishing village",
+        "Snorkel the surrounding reef",
+        "Try fresh seafood",
+        "Explore island by motorbike"
+      ],
+      "mapLink": "https://maps.google.com/?q=Koh+Sdach,+Koh+Kong",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "kep-national-park",
+      "name": "Kep National Park",
+      "province": "kep",
+      "tags": [
+        "Nature",
+        "Hiking",
+        "Beach"
+      ],
+      "tagline": "Iconic coastal jungle sanctuary famous for lush forest trails, diverse wildlife, and breathtaking ocean views.",
+      "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=80",
+      "quickInfo": {
+        "location": "Kep",
+        "bestFor": "Hiking, Nature, Wildlife",
+        "activities": "Hiking, bird watching, coastal walks",
+        "budget": "Low"
+      },
+      "about": "Kep National Park is a small but spectacular forested area on the Kep peninsula. Its network of trails winds through dense jungle to viewpoints overlooking the Gulf of Thailand, with chances to spot wildlife including butterflies and forest birds.",
+      "aboutImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80",
+      "thingsToDo": [
+        "Hike the jungle loop trail",
+        "Birdwatching tour",
+        "Coastal sunset viewpoints"
+      ],
+      "mapLink": "https://maps.google.com/?q=Kep+National+Park",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "pub-street",
+      "name": "Pub Street",
+      "province": "siem-reap",
+      "tags": [
+        "Culture",
+        "Local",
+        "Night"
+      ],
+      "tagline": "Siem Reap's legendary nightlife strip — neon lights, street food, live music, and Cambodian cocktails.",
+      "image": "https://images.unsplash.com/photo-1470219556762-1771e7f9427d?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Nightlife, Food, Entertainment",
+        "activities": "Bar hopping, street food, live music, cocktails",
+        "budget": "Low to Medium"
+      },
+      "about": "Pub Street is the vibrant heart of Siem Reap's nightlife. Lined with bars, restaurants, and street stalls, it comes alive after dark with live music, happy-hour deals, and the smell of grilled skewers. A must-visit evening experience for every traveller.",
+      "aboutImage": "https://images.unsplash.com/photo-1470219556762-1771e7f9427d?w=600&q=80",
+      "thingsToDo": [
+        "Try a Khmer cocktail at a rooftop bar",
+        "Eat street food skewers",
+        "Enjoy live traditional music",
+        "Shop the Night Market"
+      ],
+      "mapLink": "https://maps.google.com/?q=Pub+Street,+Siem+Reap",
+      "food": [
+        {
+          "name": "Grilled Skewers",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
+          "desc": "Marinated chicken, pork, and shrimp grilled over charcoal — a street food staple."
+        },
+        {
+          "name": "Amok Fish",
+          "image": "https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80",
+          "desc": "Traditional Khmer curry cooked in banana leaves — rich, coconut, and fragrant."
+        }
+      ],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "fair-trade-village",
+      "name": "Fair Trade Village",
+      "province": "siem-reap",
+      "tags": [
+        "Culture",
+        "Local"
+      ],
+      "tagline": "A community of artisans preserving traditional Khmer crafts — silk weaving, pottery, and wood carving.",
+      "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Culture, Shopping, Crafts",
+        "activities": "Craft workshops, silk weaving demo, souvenir shopping",
+        "budget": "Low"
+      },
+      "about": "The Fair Trade Village near Angkor Wat is a craft hub where local artisans hand-make traditional Khmer items — from silk scarves and lacquerware to silver jewellery and stone carvings. All purchases directly support the local community.",
+      "aboutImage": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80",
+      "thingsToDo": [
+        "Watch silk weaving demonstrations",
+        "Try pottery making",
+        "Shop authentic Khmer souvenirs",
+        "Meet local artisans"
+      ],
+      "mapLink": "https://maps.google.com/?q=Fair+Trade+Village,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "phnom-krom",
+      "name": "Phnom Krom Temple",
+      "province": "siem-reap",
+      "tags": [
+        "Temple",
+        "Culture",
+        "History"
+      ],
+      "tagline": "A hilltop temple ruin with sweeping views over the Tonle Sap lake and the setting sun.",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80",
+      "quickInfo": {
+        "location": "Siem Reap",
+        "bestFor": "Sunset, Photography, History",
+        "activities": "Temple visit, sunset watching, lake views",
+        "budget": "Low"
+      },
+      "about": "Phnom Krom sits on a low hill at the southern end of Siem Reap, overlooking the Tonle Sap lake. The 10th-century temple features three towers dedicated to the Hindu Trinity — Brahma, Vishnu, and Shiva — and offers stunning sunset views.",
+      "aboutImage": "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80",
+      "thingsToDo": [
+        "Watch sunset from the hilltop",
+        "Explore the three ancient towers",
+        "Photograph the Tonle Sap lake below"
+      ],
+      "mapLink": "https://maps.google.com/?q=Phnom+Krom+Temple,+Siem+Reap",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "kampot-old-town",
+      "name": "Kampot Old Town",
+      "province": "kampot",
+      "tags": [
+        "Culture",
+        "History",
+        "Local"
+      ],
+      "tagline": "A charming riverside colonial town — French-era architecture, pepper farms, art cafes, and slow-travel vibes.",
+      "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1400&q=80",
+      "quickInfo": {
+        "location": "Kampot",
+        "bestFor": "Culture, History, Relaxation",
+        "activities": "River boat tour, cycling, pepper farm visit, café hopping",
+        "budget": "Low"
+      },
+      "about": "Kampot Old Town is a beautifully preserved French colonial riverside town. Wander pastel-coloured shophouses, visit a working Kampot pepper farm, take a sunset boat cruise on the Praek Tuek Chhu River, and enjoy the laid-back, artistic atmosphere.",
+      "aboutImage": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80",
+      "thingsToDo": [
+        "Stroll the colonial riverside promenade",
+        "Visit a Kampot pepper farm",
+        "Sunset boat cruise",
+        "Explore French-era shophouses",
+        "Try Kampot pepper crab"
+      ],
+      "mapLink": "https://maps.google.com/?q=Kampot+Old+Town,+Cambodia",
+      "food": [
+        {
+          "name": "Pepper Crab",
+          "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80",
+          "desc": "Fresh crab cooked with the world-famous Kampot green pepper — a local specialty you can't miss."
+        }
+      ],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "kep-crab-market",
+      "name": "Kep Crab Market",
+      "province": "kep",
+      "tags": [
+        "Culture",
+        "Local",
+        "Beach"
+      ],
+      "tagline": "Fresh crab, sea breezes, and seaside dining — the living heart of Kep's coastal culture.",
+      "image": "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=1400&q=80",
+      "quickInfo": {
+        "location": "Kep",
+        "bestFor": "Seafood, Local Life, Culture",
+        "activities": "Fresh crab dining, market visit, waterfront walk",
+        "budget": "Low"
+      },
+      "about": "Kep's famous Crab Market is a sprawling waterfront bazaar where fishermen bring in fresh catches daily. Surrounded by seafood shacks on stilts over the water, visitors can choose their live crab and have it cooked to order with Kampot pepper.",
+      "aboutImage": "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80",
+      "thingsToDo": [
+        "Choose and cook your own fresh crab",
+        "Browse the seafood stalls",
+        "Walk the coastal promenade at sunset",
+        "Try grilled squid and shrimp"
+      ],
+      "mapLink": "https://maps.google.com/?q=Kep+Crab+Market,+Cambodia",
+      "food": [
+        {
+          "name": "Kampot Pepper Crab",
+          "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80",
+          "desc": "Live blue crab stir-fried with fresh Kampot green pepper — the signature dish of Kep."
+        },
+        {
+          "name": "Grilled Squid",
+          "image": "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&q=80",
+          "desc": "Whole squid grilled over charcoal and served with sweet chilli sauce."
+        }
+      ],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "bunong-village",
+      "name": "Bunong Indigenous Village",
+      "province": "mondulkiri",
+      "tags": [
+        "Culture",
+        "Local",
+        "Nature"
+      ],
+      "tagline": "Connect with Cambodia's indigenous Bunong people — traditional longhouses, forest wisdom, and ancient customs.",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80",
+      "quickInfo": {
+        "location": "Mondulkiri",
+        "bestFor": "Culture, Eco-tourism, Local Life",
+        "activities": "Village tour, traditional ceremony, jungle walk, coffee farm",
+        "budget": "Low"
+      },
+      "about": "The Bunong are the indigenous highland people of Mondulkiri, with deep ties to the forest and a rich oral culture. Village visits offer a rare window into traditional longhouse life, animist ceremonies, hand-woven textiles, and the famous Bunong elephant relationship.",
+      "aboutImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
+      "thingsToDo": [
+        "Join a guided village walk",
+        "Watch traditional Bunong dance",
+        "Visit a highland coffee farm",
+        "Learn about elephant and forest traditions"
+      ],
+      "mapLink": "https://maps.google.com/?q=Bunong+Village,+Mondulkiri",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "elephant-valley",
+      "name": "Elephant Valley Project",
+      "province": "mondulkiri",
+      "tags": [
+        "Nature",
+        "Adventure",
+        "Culture"
+      ],
+      "tagline": "Walk alongside rescued elephants in their natural highland habitat — Cambodia's most ethical elephant experience.",
+      "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1400&q=80",
+      "quickInfo": {
+        "location": "Mondulkiri",
+        "bestFor": "Wildlife, Eco-tourism, Nature",
+        "activities": "Elephant walks, jungle trekking, waterfall swimming",
+        "budget": "Medium"
+      },
+      "about": "The Elephant Valley Project is a sanctuary for rescued domestic elephants, allowing them to roam free across 1,500 hectares of highland forest. Visitors walk alongside the elephants through the jungle, observe their natural behaviour, and swim in waterfalls — all in an ethical, no-riding environment.",
+      "aboutImage": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80",
+      "thingsToDo": [
+        "Walk with elephants in the jungle",
+        "Swim at Sen Monorom waterfall",
+        "Trek highland trails",
+        "Learn about elephant conservation"
+      ],
+      "mapLink": "https://maps.google.com/?q=Elephant+Valley+Project,+Mondulkiri",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    },
+    {
+      "id": "cardamom-mountains",
+      "name": "Cardamom Mountains",
+      "province": "koh-kong",
+      "tags": [
+        "Nature",
+        "Hiking",
+        "Adventure"
+      ],
+      "tagline": "Southeast Asia's last great wilderness — ancient rainforest, rare wildlife, and untouched rivers.",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=80",
+      "quickInfo": {
+        "location": "Koh Kong",
+        "bestFor": "Eco-tourism, Hiking, Wildlife",
+        "activities": "Jungle trekking, river kayaking, wildlife spotting, camping",
+        "budget": "Low to Medium"
+      },
+      "about": "The Cardamom Mountains are one of Southeast Asia's most important biodiversity hotspots, sheltering sun bears, clouded leopards, Irrawaddy dolphins, and thousands of plant species. The dense rainforest, clear rivers, and rugged terrain make it Cambodia's ultimate wilderness adventure.",
+      "aboutImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
+      "thingsToDo": [
+        "Multi-day jungle trek",
+        "Kayak the Tatai River",
+        "Spot rare wildlife with a ranger",
+        "Camp under the stars",
+        "Visit Tatai community"
+      ],
+      "mapLink": "https://maps.google.com/?q=Cardamom+Mountains,+Koh+Kong",
+      "food": [],
+      "hotels": [],
+      "restaurants": []
+    }
+  ],
+  "categories": [
+    "Adventure",
+    "Culture",
+    "Nature",
+    "Relaxation",
+    "Beach",
+    "Temple",
+    "Mountain",
+    "WaterFall",
+    "History",
+    "Island",
+    "Hiking",
+    "Luxury",
+    "Local",
+    "Night"
+  ]
+}
