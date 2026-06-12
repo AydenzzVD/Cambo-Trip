@@ -6,7 +6,7 @@
 @section('content')
   <!-- Search Hero -->
   <div class="search-hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Angkor_Wat_2013.jpg/1280px-Angkor_Wat_2013.jpg" alt="Cambodia landscape" />
+    <img src="https://www.image2url.com/r2/default/images/1781278986796-2dc1cee5-42a8-4d51-a06f-6fffa5fda0c9.png" alt="Cambodia landscape" />
     <div class="search-hero-overlay">
       <h1 style="color: var(--color-white); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; text-shadow: 2px 3px 10px rgba(0,0,0,0.5);">Find Your Next Adventure</h1>
       <form action="{{ route('search') }}" method="GET" class="search-input-wrap">
