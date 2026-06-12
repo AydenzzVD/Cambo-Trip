@@ -7,7 +7,7 @@
 @section('content')
   <!-- Hero Section -->
   <div class="hero">
-    <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Angkor_Wat_2013.jpg/1280px-Angkor_Wat_2013.jpg" alt="Cambodia destination" />
+    <img class="hero-img" src="https://www.image2url.com/r2/default/images/1781278883159-ee67d154-ad85-4700-88e7-1c016986fb64.png" alt="Cambodia destination" />
     <div class="hero-overlay">
       <h1 class="hero-title">Destination</h1>
       <p class="hero-subtitle">Explore the rich provinces of Cambodia. From ancient temples<br>in the North to relaxing beaches in the South.</p>
