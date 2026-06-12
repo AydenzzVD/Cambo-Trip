@@ -4,9 +4,8 @@
 
 @section('content')
   <!-- Hero Section -->
-  <div class="hero-dual" style="position: relative;">
-    <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Angkor_Wat_2013.jpg/1280px-Angkor_Wat_2013.jpg" alt="Angkor Wat sunrise" />
-    <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Koh_Rong_beach.jpg/1280px-Koh_Rong_beach.jpg" alt="Koh Rong island" />
+  <div class="hero-dual" style="position: relative; display: block;">
+    <img class="hero-img" src="https://www.image2url.com/r2/default/images/1781277939613-fe493f83-edb7-4d45-8044-f914fa804fa7.png" alt="CamboTrips banner" style="width: 100%; height: 100%; object-fit: cover;" />
     <div class="hero-overlay" style="position: absolute; border-radius: var(--radius-lg);">
       <h1 class="hero-title">Welcome to the Kingdom of Wonder</h1>
     </div>
