@@ -43,15 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sticky blur/shadow on scroll for header
+  // Sticky blur/shadow on scroll for header & Back to Top visibility
   const navbar = document.getElementById('navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-    });
-    // Check initial state
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  }
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  const handleScroll = () => {
+    const scrollPos = window.scrollY;
+    if (navbar) {
+      navbar.classList.toggle('scrolled', scrollPos > 20);
+    }
+    if (backToTopBtn) {
+      backToTopBtn.classList.toggle('show', scrollPos > 300);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // Check initial state
+  handleScroll();
 
   // Initialize page enter transitions
   initPageTransition();

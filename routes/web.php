@@ -34,6 +34,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('provinces', App\Http\Controllers\Admin\ProvinceController::class)->except(['show']);
     Route::resource('places', App\Http\Controllers\Admin\PlaceController::class)->except(['show']);
+    Route::resource('places.foods', App\Http\Controllers\Admin\PlaceFoodController::class);
+    Route::resource('places.hotels', App\Http\Controllers\Admin\PlaceHotelController::class);
+    Route::resource('places.restaurants', App\Http\Controllers\Admin\PlaceRestaurantController::class);
     Route::resource('tags', App\Http\Controllers\Admin\TagController::class)->except(['show']);
     Route::resource('reviews', App\Http\Controllers\Admin\ReviewController::class)->only(['index', 'destroy']);
 });

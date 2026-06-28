@@ -12,7 +12,7 @@ class PlaceController extends Controller
 {
     public function index()
     {
-        $places = Place::with(['province', 'tags'])
+        $places = Place::with(['province', 'tags', 'foods', 'hotels', 'restaurants'])
             ->withCount('reviews')
             ->orderBy('name')
             ->get();

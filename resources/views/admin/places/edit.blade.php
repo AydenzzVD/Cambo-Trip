@@ -8,6 +8,18 @@
     <a href="{{ route('admin.places.index') }}" class="btn btn-secondary">← Back to List</a>
   </div>
 
+  <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+    <a href="{{ route('admin.places.foods.index', $place->id) }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border-color: var(--color-border); text-decoration: none; padding: 10px 20px;">
+      🍲 Manage Local Foods ({{ $place->foods->count() }})
+    </a>
+    <a href="{{ route('admin.places.hotels.index', $place->id) }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border-color: var(--color-border); text-decoration: none; padding: 10px 20px;">
+      🏨 Manage Hotels ({{ $place->hotels->count() }})
+    </a>
+    <a href="{{ route('admin.places.restaurants.index', $place->id) }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border-color: var(--color-border); text-decoration: none; padding: 10px 20px;">
+      🍽️ Manage Restaurants ({{ $place->restaurants->count() }})
+    </a>
+  </div>
+
   <div class="form-card">
     <form action="{{ route('admin.places.update', $place->id) }}" method="POST">
       @csrf

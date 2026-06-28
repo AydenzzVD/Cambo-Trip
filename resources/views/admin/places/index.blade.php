@@ -19,6 +19,7 @@
             <th>Province</th>
             <th>Categories (Tags)</th>
             <th>Reviews</th>
+            <th>Related Info</th>
             <th style="text-align: right;">Actions</th>
           </tr>
         </thead>
@@ -47,6 +48,13 @@
                 <span style="font-size: 0.8rem; color: var(--color-text-muted);">
                   ({{ $place->reviews_count }})
                 </span>
+              </td>
+              <td>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <a href="{{ route('admin.places.foods.index', $place->id) }}" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 4px 10px; justify-content: flex-start; gap: 6px; text-decoration: none; border-color: var(--color-border); color: var(--color-text);">🍲 Foods ({{ $place->foods->count() }})</a>
+                  <a href="{{ route('admin.places.hotels.index', $place->id) }}" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 4px 10px; justify-content: flex-start; gap: 6px; text-decoration: none; border-color: var(--color-border); color: var(--color-text);">🏨 Hotels ({{ $place->hotels->count() }})</a>
+                  <a href="{{ route('admin.places.restaurants.index', $place->id) }}" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 4px 10px; justify-content: flex-start; gap: 6px; text-decoration: none; border-color: var(--color-border); color: var(--color-text);">🍽️ Eat ({{ $place->restaurants->count() }})</a>
+                </div>
               </td>
               <td style="text-align: right;">
                 <div style="display: flex; justify-content: flex-end; gap: 8px;">
