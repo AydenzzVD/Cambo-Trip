@@ -36,7 +36,7 @@
       <h2 class="section-title">✨ Curated Picks</h2>
       <div class="cards-row">
         @foreach($curated as $place)
-          <div class="card place-card" onclick="window.location.href='{{ route('place.show', $place->id) }}'" style="cursor: pointer;">
+          <a href="{{ route('place.show', $place->id) }}" class="card place-card">
             <div class="card-img-wrap">
               <img src="{{ $place->image }}" alt="{{ $place->name }}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&q=60'" />
               <div class="card-tags">
@@ -54,7 +54,7 @@
               @endif
               <p class="card-desc">{{ $place->tagline }}</p>
             </div>
-          </div>
+          </a>
         @endforeach
       </div>
     </div>
@@ -66,7 +66,7 @@
       <h2 class="section-title">🔥 Popular Spots</h2>
       <div class="cards-row">
         @foreach($popular as $place)
-          <div class="card place-card" onclick="window.location.href='{{ route('place.show', $place->id) }}'" style="cursor: pointer;">
+          <a href="{{ route('place.show', $place->id) }}" class="card place-card">
             <div class="card-img-wrap">
               <img src="{{ $place->image }}" alt="{{ $place->name }}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&q=60'" />
               <div class="card-tags">
@@ -84,7 +84,7 @@
               @endif
               <p class="card-desc">{{ $place->tagline }}</p>
             </div>
-          </div>
+          </a>
         @endforeach
       </div>
     </div>

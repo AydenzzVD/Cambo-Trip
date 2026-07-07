@@ -19,7 +19,7 @@
   <!-- Province Grid -->
   <div class="provinces-grid" id="province-grid">
     @foreach($provinces as $province)
-      <div class="province-card" onclick="window.location.href='{{ route('destination.show', $province->id) }}'" style="cursor: pointer;">
+      <a href="{{ route('destination.show', $province->id) }}" class="province-card">
         <div class="province-img-wrap">
           <img src="{{ $province->image }}" alt="{{ $province->name }}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=600&q=60'">
           <div class="province-overlay">
@@ -29,7 +29,7 @@
           </div>
         </div>
         <p class="province-desc">{{ $province->description }}</p>
-      </div>
+      </a>
     @endforeach
   </div>
 @endsection

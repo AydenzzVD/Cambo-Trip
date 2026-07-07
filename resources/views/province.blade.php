@@ -32,10 +32,10 @@
           <h2 class="prov-section-title">{{ $label }}</h2>
           <div class="prov-place-grid">
             @foreach($groupedPlaces[$key] as $place)
-              <div class="prov-place-item" onclick="window.location.href='{{ route('place.show', $place->id) }}'" style="cursor: pointer;">
+              <a href="{{ route('place.show', $place->id) }}" class="prov-place-item">
                 <img src="{{ $place->image }}" alt="{{ $place->name }}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=300&q=60'" />
                 <p class="prov-place-name">{{ $place->name }}</p>
-              </div>
+              </a>
             @endforeach
           </div>
         </div>

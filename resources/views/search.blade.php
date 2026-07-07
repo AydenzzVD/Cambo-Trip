@@ -62,7 +62,7 @@
       @if($places->count() > 0)
         <div class="cards-grid">
           @foreach($places as $place)
-            <div class="card place-card" onclick="window.location.href='{{ route('place.show', $place->id) }}'" style="cursor: pointer;">
+            <a href="{{ route('place.show', $place->id) }}" class="card place-card">
               <div class="card-img-wrap">
                 <img src="{{ $place->image }}" alt="{{ $place->name }}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&q=60'" />
                 <div class="card-tags">
@@ -83,7 +83,7 @@
                   <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 4px;">📍 {{ $place->province->name }}</p>
                 @endif
               </div>
-            </div>
+            </a>
           @endforeach
         </div>
       @elseif(!empty($query) || !empty($category))

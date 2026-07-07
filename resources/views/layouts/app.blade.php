@@ -45,7 +45,9 @@
   </div>
 
   <!-- Content -->
-  @yield('content')
+  <main id="app-content">
+    @yield('content')
+  </main>
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -125,24 +127,18 @@
 
   <!-- JavaScript -->
   <script src="{{ asset('js/app.js') }}"></script>
-  
+
   <!-- Flash Notification Toasts -->
   @if (session('success'))
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        showToast("{{ session('success') }}", 'success');
-      });
-    </script>
+    <script>showToast("{{ addslashes(session('success')) }}", 'success');</script>
   @endif
-
   @if (session('error'))
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        showToast("{{ session('error') }}", 'error');
-      });
-    </script>
+    <script>showToast("{{ addslashes(session('error')) }}", 'error');</script>
   @endif
 
+  <!-- Page-specific Scripts -->
   @yield('scripts')
+
 </body>
 </html>
+
