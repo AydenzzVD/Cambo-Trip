@@ -1,32 +1,46 @@
 // ============================================================
-// CAMBOTRIPS — SPA Navigation Engine  (v2 — clean rewrite)
+// CAMBOTRIPS — SPA Navigation Engine  (v3 — reload-loop fixes)
 // ============================================================
 //
-// Root causes fixed in this version
+// Root causes fixed in v2
 // ----------------------------------
 // BUG 1: initApp() added document click/submit/scroll listeners every time
-//         it was called. After AJAX nav, executePageScripts() re-ran app.js,
-//         calling initApp() again → duplicate listeners → double navigation.
+//         it was called → duplicate listeners → double navigation.
 // FIX:    Guard all global listeners with a single `_spaInitialised` flag.
 //
-// BUG 2: executePageScripts() iterated ALL <script> tags in the fetched HTML,
-//         including the <script src="app.js"> tag in <head>. That loaded app.js
-//         a second time, registered another click listener, and caused every
-//         link click to fire navigateTo() twice.
-// FIX:    Skip any script whose src includes "app.js".
+// BUG 2: executePageScripts() re-ran app.js from the fetched <head>, causing
+//         a second click listener to fire navigateTo() twice on every link.
+// FIX:    runInlineScripts() skips any <script src="..."> tags.
 //
-// BUG 3: window.location.href inside the catch block caused a real full-page
-//         reload on any transient network blip, triggering the browser's own
-//         loading bar on top of the AJAX one.
+// BUG 3: window.location.href in the catch block caused a real full-page
+//         reload on any transient network blip.
 // FIX:    Removed the fallback. Errors are shown as a toast instead.
 //
-// BUG 4: No navigation lock — rapidly clicking a link fired multiple fetch()
-//         calls in parallel, causing content to flicker and render 2-3 times.
+// BUG 4: No navigation lock — rapid clicks fired multiple fetch() calls.
 // FIX:    _navigating flag blocks concurrent navigations.
 //
-// BUG 5: onclick="window.location.href='...'" on card <div>s bypassed the SPA
-//         router entirely and always caused a full page load.
-// FIX:    All cards are now wrapped in proper <a> tags (Blade files updated).
+// BUG 5: onclick="window.location.href='...'" on card <div>s bypassed SPA.
+// FIX:    All cards are now wrapped in proper <a> tags.
+//
+// Root causes fixed in v3
+// ----------------------------------
+// BUG 6: Footer newsletter form had no method attribute, so it defaulted to
+//         GET. The SPA submit handler intercepted it, built a URL from the
+//         current page + email query param, and called navigateTo() — making
+//         the page appear to reload/re-render on every newsletter submission.
+// FIX:    Added method="post" to the newsletter form (app.blade.php) so the
+//         SPA's GET-only submit interceptor skips it entirely.
+//         Also added a data-bypass attribute check in the submit listener as
+//         a general escape hatch for any future form that must not be caught.
+//
+// BUG 7: navigateTo() had no isStandaloneRoute guard of its own. If it was
+//         ever called with an admin/auth URL (e.g. via history state), it
+//         would fetch the page, find no #app-content, and fall back to
+//         window.location.href = url — which, if url == current URL, triggers
+//         a hard browser reload.
+// FIX:    isStandaloneRoute check moved to the very top of navigateTo() so
+//         the function bails out with a real navigation before any fetch,
+//         regardless of the call site.
 //
 // ============================================================
 
@@ -93,6 +107,17 @@ function isStandaloneRoute(pathname) {
 function navigateTo(url, addToHistory = true) {
   if (_navigating) return;          // prevent double-click races
   if (window.location.href === url) return; // already here
+
+  // Guard: bail out immediately for admin/auth/standalone pages.
+  // This ensures navigateTo() itself can never accidentally fetch
+  // a non-SPA page, regardless of which code path invoked it.
+  try {
+    const u = new URL(url, window.location.href);
+    if (isStandaloneRoute(u.pathname)) {
+      window.location.href = url;
+      return;
+    }
+  } catch (_) { /* invalid URL — fall through and let fetch() fail gracefully */ }
 
   _navigating = true;
 
@@ -230,9 +255,12 @@ function initApp() {
   });
 
   // ── Delegate GET form submissions (search, filters) ───────
+  // Skips: POST forms, cross-origin forms, standalone-route forms,
+  //        and any form with the data-bypass attribute.
   document.addEventListener('submit', e => {
     const form = e.target;
-    if (form.method.toLowerCase() !== 'get') return;
+    if (form.method.toLowerCase() !== 'get') return;   // only GET forms
+    if (form.hasAttribute('data-bypass')) return;       // explicit opt-out
 
     try {
       const url = new URL(form.action || window.location.href, window.location.href);

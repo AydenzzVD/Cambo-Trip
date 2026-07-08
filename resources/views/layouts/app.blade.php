@@ -107,7 +107,7 @@
       <div class="footer-column">
         <h4 class="footer-title">Newsletter</h4>
         <p class="newsletter-text">Subscribe to get the latest travel guides, tips, and hidden gems of Cambodia.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+        <form class="newsletter-form" method="post" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
           <input type="email" placeholder="Your Email Address" required class="newsletter-input" />
           <button type="submit" class="newsletter-btn" aria-label="Subscribe">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
