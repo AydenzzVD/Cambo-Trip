@@ -49,6 +49,7 @@ class PlaceController extends Controller
             'id' => 'required|string|alpha_dash|unique:places,id|max:100',
             'name' => 'required|string|max:100',
             'province_id' => 'required|string|exists:provinces,id',
+            'category' => 'required|in:Historical,Culture,Nature & Adventure,Nightlife',
             'tagline' => 'required|string|max:255',
             'image' => 'required|url|max:500',
             'location' => 'required|string|max:100',
@@ -75,6 +76,7 @@ class PlaceController extends Controller
             'id' => strtolower($request->id),
             'name' => trim($request->name),
             'province_id' => $request->province_id,
+            'category' => $request->category,
             'tagline' => trim($request->tagline),
             'image' => trim($request->image),
             'quick_info' => $quick_info,
@@ -106,6 +108,7 @@ class PlaceController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'province_id' => 'required|string|exists:provinces,id',
+            'category' => 'required|in:Historical,Culture,Nature & Adventure,Nightlife',
             'tagline' => 'required|string|max:255',
             'image' => 'required|url|max:500',
             'location' => 'required|string|max:100',
@@ -129,6 +132,7 @@ class PlaceController extends Controller
         $place->update([
             'name' => trim($request->name),
             'province_id' => $request->province_id,
+            'category' => $request->category,
             'tagline' => trim($request->tagline),
             'image' => trim($request->image),
             'quick_info' => $quick_info,

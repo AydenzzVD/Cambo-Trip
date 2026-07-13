@@ -17,33 +17,18 @@ class ProvinceController extends Controller
     {
         $province = Province::with(['places.tags'])->where('id', $id)->firstOrFail();
 
+        // Group places by their dedicated category column
         $groupedPlaces = [
-            'Historical' => [],
-            'Culture' => [],
-            'Nature & Adventure' => [],
-            'Nightlife' => []
+            'Historical'        => collect(),
+            'Culture'           => collect(),
+            'Nature & Adventure'=> collect(),
+            'Nightlife'         => collect(),
         ];
 
         foreach ($province->places as $place) {
-            foreach ($place->tags as $tag) {
-                if (in_array($tag->name, ['Temple', 'Historical', 'History'])) {
-                    $groupedPlaces['Historical'][] = $place;
-                }
-                if (in_array($tag->name, ['Culture', 'Local'])) {
-                    $groupedPlaces['Culture'][] = $place;
-                }
-                if (in_array($tag->name, ['Nature', 'Mountain', 'Beach', 'WaterFall', 'Island', 'Hiking'])) {
-                    $groupedPlaces['Nature & Adventure'][] = $place;
-                }
-                if (in_array($tag->name, ['Night', 'Nightlife'])) {
-                    $groupedPlaces['Nightlife'][] = $place;
-                }
+            if ($place->category && isset($groupedPlaces[$place->category])) {
+                $groupedPlaces[$place->category]->push($place);
             }
-        }
-
-        // De-duplicate places in groups
-        foreach ($groupedPlaces as $key => $list) {
-            $groupedPlaces[$key] = collect($list)->unique('id')->values();
         }
 
         return view('province', compact('province', 'groupedPlaces'));

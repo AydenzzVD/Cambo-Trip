@@ -119,6 +119,20 @@
           <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--color-sidebar);">Scenery, Maps & Categories</h3>
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="category">Province Section (Category) <span style="color:red">*</span></label>
+          <select id="category" name="category" class="form-control" required>
+            <option value="">-- Select one section --</option>
+            @foreach(['Historical', 'Culture', 'Nature & Adventure', 'Nightlife'] as $cat)
+              <option value="{{ $cat }}" {{ old('category', $place->category) == $cat ? 'selected' : '' }}>{{ $cat }}</option>
+            @endforeach
+          </select>
+          <span style="font-size: 0.75rem; color: var(--color-text-muted);">This determines which section the place appears in on the province page.</span>
+          @error('category')
+            <p class="form-error">{{ $message }}</p>
+          @enderror
+        </div>
+
         <div class="form-group form-full">
           <label class="form-label">Category Tags</label>
           <div class="checkbox-grid">

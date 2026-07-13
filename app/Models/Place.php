@@ -11,7 +11,7 @@ class Place extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'id', 'name', 'province_id', 'tagline', 'image',
+        'id', 'name', 'province_id', 'category', 'tagline', 'image',
         'quick_info', 'about', 'about_image', 'map_link',
     ];
 
