@@ -9,6 +9,9 @@
   </div>
 
   <div style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+    <a href="{{ route('admin.places.activities.index', $place->id) }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border-color: var(--color-border); text-decoration: none; padding: 10px 20px;">
+      🚶 Manage Things to Do ({{ $place->activities->count() }})
+    </a>
     <a href="{{ route('admin.places.foods.index', $place->id) }}" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; border-color: var(--color-border); text-decoration: none; padding: 10px 20px;">
       🍲 Manage Local Foods ({{ $place->foods->count() }})
     </a>
@@ -152,9 +155,25 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="about_image">scenery/About Image URL (Optional)</label>
+          <label class="form-label" for="about_image">Scenery/About Image URL 1 (Optional)</label>
           <input type="url" id="about_image" name="about_image" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image', $place->about_image) }}" />
           @error('about_image')
+            <p class="form-error">{{ $message }}</p>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="about_image_2">Scenery/About Image URL 2 (Optional)</label>
+          <input type="url" id="about_image_2" name="about_image_2" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image_2', $place->about_image_2) }}" />
+          @error('about_image_2')
+            <p class="form-error">{{ $message }}</p>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="about_image_3">Scenery/About Image URL 3 (Optional)</label>
+          <input type="url" id="about_image_3" name="about_image_3" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image_3', $place->about_image_3) }}" />
+          @error('about_image_3')
             <p class="form-error">{{ $message }}</p>
           @enderror
         </div>

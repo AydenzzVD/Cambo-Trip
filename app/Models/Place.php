@@ -12,7 +12,7 @@ class Place extends Model
 
     protected $fillable = [
         'id', 'name', 'province_id', 'category', 'tagline', 'image',
-        'quick_info', 'about', 'about_image', 'map_link',
+        'quick_info', 'about', 'about_image', 'about_image_2', 'about_image_3', 'map_link',
     ];
 
     protected $casts = [

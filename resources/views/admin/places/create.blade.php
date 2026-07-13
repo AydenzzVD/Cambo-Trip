@@ -132,9 +132,25 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="about_image">scenery/About Image URL (Optional)</label>
+          <label class="form-label" for="about_image">Scenery/About Image URL 1 (Optional)</label>
           <input type="url" id="about_image" name="about_image" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image') }}" />
           @error('about_image')
+            <p class="form-error">{{ $message }}</p>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="about_image_2">Scenery/About Image URL 2 (Optional)</label>
+          <input type="url" id="about_image_2" name="about_image_2" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image_2') }}" />
+          @error('about_image_2')
+            <p class="form-error">{{ $message }}</p>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="about_image_3">Scenery/About Image URL 3 (Optional)</label>
+          <input type="url" id="about_image_3" name="about_image_3" class="form-control" placeholder="https://images.unsplash.com/..." value="{{ old('about_image_3') }}" />
+          @error('about_image_3')
             <p class="form-error">{{ $message }}</p>
           @enderror
         </div>

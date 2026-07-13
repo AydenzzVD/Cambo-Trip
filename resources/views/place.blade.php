@@ -45,9 +45,23 @@
       <h2 class="place-section-title">About This Place</h2>
       <div class="about-grid">
         <p class="about-text">{{ $place->about }}</p>
-        @if($place->about_image)
-          <div class="about-img">
-            <img src="{{ $place->about_image }}" alt="{{ $place->name }} scenery" onerror="this.parentElement.style.display='none'" />
+        @if($place->about_image || $place->about_image_2 || $place->about_image_3)
+          <div class="about-gallery">
+            @if($place->about_image)
+              <div class="about-img">
+                <img src="{{ $place->about_image }}" alt="{{ $place->name }} scenery 1" onerror="this.style.display='none'" />
+              </div>
+            @endif
+            @if($place->about_image_2)
+              <div class="about-img">
+                <img src="{{ $place->about_image_2 }}" alt="{{ $place->name }} scenery 2" onerror="this.style.display='none'" />
+              </div>
+            @endif
+            @if($place->about_image_3)
+              <div class="about-img">
+                <img src="{{ $place->about_image_3 }}" alt="{{ $place->name }} scenery 3" onerror="this.style.display='none'" />
+              </div>
+            @endif
           </div>
         @endif
       </div>

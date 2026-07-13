@@ -58,6 +58,8 @@ class PlaceController extends Controller
             'quick_rating' => 'required|string|max:100',
             'about' => 'required|string',
             'about_image' => 'nullable|url|max:500',
+            'about_image_2' => 'nullable|url|max:500',
+            'about_image_3' => 'nullable|url|max:500',
             'map_link' => 'nullable|url|max:500',
             'tags' => 'nullable|array',
             'tags.*' => 'exists:tags,id',
@@ -82,6 +84,8 @@ class PlaceController extends Controller
             'quick_info' => $quick_info,
             'about' => trim($request->about),
             'about_image' => $request->about_image ? trim($request->about_image) : null,
+            'about_image_2' => $request->about_image_2 ? trim($request->about_image_2) : null,
+            'about_image_3' => $request->about_image_3 ? trim($request->about_image_3) : null,
             'map_link' => $request->map_link ? trim($request->map_link) : null,
         ]);
 
@@ -117,6 +121,8 @@ class PlaceController extends Controller
             'quick_rating' => 'required|string|max:100',
             'about' => 'required|string',
             'about_image' => 'nullable|url|max:500',
+            'about_image_2' => 'nullable|url|max:500',
+            'about_image_3' => 'nullable|url|max:500',
             'map_link' => 'nullable|url|max:500',
             'tags' => 'nullable|array',
             'tags.*' => 'exists:tags,id',
@@ -138,6 +144,8 @@ class PlaceController extends Controller
             'quick_info' => $quick_info,
             'about' => trim($request->about),
             'about_image' => $request->about_image ? trim($request->about_image) : null,
+            'about_image_2' => $request->about_image_2 ? trim($request->about_image_2) : null,
+            'about_image_3' => $request->about_image_3 ? trim($request->about_image_3) : null,
             'map_link' => $request->map_link ? trim($request->map_link) : null,
         ]);
 
