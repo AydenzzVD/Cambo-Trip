@@ -10,14 +10,30 @@ use Illuminate\Http\Request;
 
 class PlaceController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $places = Place::with(['province', 'tags', 'foods', 'hotels', 'restaurants'])
-            ->withCount('reviews')
-            ->orderBy('name')
-            ->get();
+        $search = trim($request->query('search'));
+
+        $query = Place::with(['province', 'tags', 'foods', 'hotels', 'restaurants'])
+            ->withCount('reviews');
+
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'LIKE', "%{$search}%")
+                  ->orWhere('tagline', 'LIKE', "%{$search}%")
+                  ->orWhere('about', 'LIKE', "%{$search}%")
+                  ->orWhereHas('province', function ($pq) use ($search) {
+                      $pq->where('name', 'LIKE', "%{$search}%");
+                  })
+                  ->orWhereHas('tags', function ($tq) use ($search) {
+                      $tq->where('name', 'LIKE', "%{$search}%");
+                  });
+            });
+        }
+
+        $places = $query->orderBy('name')->paginate(10);
             
-        return view('admin.places.index', compact('places'));
+        return view('admin.places.index', compact('places', 'search'));
     }
 
     public function create()

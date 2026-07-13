@@ -7,6 +7,19 @@
     <h1 class="page-title">📍 Places</h1>
     <a href="{{ route('admin.places.create') }}" class="btn btn-primary">+ Add New Place</a>
   </div>
+  
+  <div class="search-bar-container" style="background: var(--color-surface); padding: 18px 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); margin-bottom: 24px;">
+    <form action="{{ route('admin.places.index') }}" method="GET" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <div style="flex-grow: 1; min-width: 250px; position: relative;">
+        <input type="text" name="search" class="form-control" placeholder="Search places by name, province, category..." value="{{ $search ?? '' }}" style="width: 100%; padding-left: 38px;" />
+        <span style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--color-text-muted); font-size: 0.95rem;">🔍</span>
+      </div>
+      <button type="submit" class="btn btn-primary" style="padding: 10px 24px;">Search</button>
+      @if(!empty($search))
+        <a href="{{ route('admin.places.index') }}" class="btn btn-secondary" style="padding: 10px 20px; display: inline-flex; align-items: center; text-decoration: none;">Clear</a>
+      @endif
+    </form>
+  </div>
 
   <div class="table-container">
     @if($places->count() > 0)
@@ -71,6 +84,35 @@
           @endforeach
         </tbody>
       </table>
+      
+      @if($places->hasPages())
+        <div class="pagination-container" style="padding: 16px 24px; border-top: 1px solid var(--color-border); display: flex; justify-content: center; align-items: center;">
+          <div class="pagination">
+            {{-- Previous Page Link --}}
+            @if($places->onFirstPage())
+              <span class="page-item disabled">&laquo;</span>
+            @else
+              <a href="{{ $places->appends(['search' => $search])->previousPageUrl() }}" class="page-item">&laquo;</a>
+            @endif
+
+            {{-- Page Numbers --}}
+            @foreach($places->getUrlRange(1, $places->lastPage()) as $page => $url)
+              @if($page == $places->currentPage())
+                <span class="page-item active">{{ $page }}</span>
+              @else
+                <a href="{{ $places->appends(['search' => $search])->url($page) }}" class="page-item">{{ $page }}</a>
+              @endif
+            @endforeach
+
+            {{-- Next Page Link --}}
+            @if($places->hasMorePages())
+              <a href="{{ $places->appends(['search' => $search])->nextPageUrl() }}" class="page-item">&raquo;</a>
+            @else
+              <span class="page-item disabled">&raquo;</span>
+            @endif
+          </div>
+        </div>
+      @endif
     @else
       <div style="text-align: center; padding: 40px; color: var(--color-text-muted);">
         No places found. Click the button above to add one.
@@ -78,3 +120,48 @@
     @endif
   </div>
 @endsection
+
+@section('styles')
+  <style>
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .page-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    a.page-item:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: rgba(74, 155, 155, 0.05);
+    }
+    .page-item.active {
+      background: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
+    .page-item.disabled {
+      color: var(--color-text-muted);
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  </style>
+@endsection
+
