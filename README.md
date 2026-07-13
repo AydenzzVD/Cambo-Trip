@@ -43,35 +43,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your Home Page, Destination Page, AI Assistant, Search Page, and Admin Dashboard here.
-
-Example:
-
-```
-/screenshots
-├── home.png
-├── destinations.png
-├── ai-chat.png
-├── search.png
-└── admin-dashboard.png
-```
-
-Then display them like:
-
-```md
-## Home Page
-
-![Home](screenshots/home.png)
-
-## Destination Page
-
-![Destination](screenshots/destinations.png)
-```
-
----
-
 ## 🚀 Installation
 
 Clone the repository
