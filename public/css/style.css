@@ -51,12 +51,9 @@ ul { list-style: none; }
 button { cursor: pointer; font-family: var(--font-main); border: none; outline: none; }
 
 /* ── Page Transition ──────────────────────────────────────── */
-.page-enter { opacity: 0; transform: translateY(12px); }
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
+/* Removed: page-enter / page-enter-active animations were causing
+   a flash on every navigation AND breaking position:fixed on the
+   navbar (transform on <body> creates a new containing block). */
 
 /* ── Navbar ───────────────────────────────────────────────── */
 #navbar-placeholder {

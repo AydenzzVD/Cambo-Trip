@@ -66,14 +66,7 @@ function showToast(message, type = 'success') {
   }, 3000);
 }
 
-// ── Page fade-in ──────────────────────────────────────────────
-function initPageTransition() {
-  document.body.classList.remove('page-enter-active');
-  document.body.classList.add('page-enter');
-  requestAnimationFrame(() =>
-    setTimeout(() => document.body.classList.add('page-enter-active'), 10)
-  );
-}
+
 
 // ── Navbar mobile toggle ──────────────────────────────────────
 // Safe to call multiple times — clones the button to wipe old listeners.
@@ -178,8 +171,7 @@ function navigateTo(url, addToHistory = true) {
       // Run page-specific inline scripts from the NEW content only
       runInlineScripts(newContent);
 
-      // Fade in
-      initPageTransition();
+
     })
     .catch(err => {
       console.error('[SPA] Navigation failed:', err);
@@ -292,8 +284,7 @@ function initApp() {
     navigateTo(target, false);
   });
 
-  // Fade in the initial page
-  initPageTransition();
+
 }
 
 // ── Bootstrap ─────────────────────────────────────────────────
