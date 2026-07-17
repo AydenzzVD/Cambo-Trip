@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@yield('title', 'CamboTrips — Welcome to the Kingdom of Wonder')</title>
   <meta name="description" content="@yield('meta_description', 'Discover Cambodia\'s most breathtaking destinations. Temples, islands, waterfalls, mountains and more await you in the Kingdom of Wonder.')" />
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+  @vite(['resources/css/style.css', 'resources/js/app.js'])
   @yield('styles')
 </head>
 <body>
@@ -125,15 +125,14 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="{{ asset('js/app.js') }}"></script>
+  <!-- JavaScript is loaded by @vite() in <head> -->
 
   <!-- Flash Notification Toasts -->
   @if (session('success'))
-    <script>showToast("{{ addslashes(session('success')) }}", 'success');</script>
+    <script type="module">window.showToast("{{ addslashes(session('success')) }}", 'success');</script>
   @endif
   @if (session('error'))
-    <script>showToast("{{ addslashes(session('error')) }}", 'error');</script>
+    <script type="module">window.showToast("{{ addslashes(session('error')) }}", 'error');</script>
   @endif
 
   <!-- Page-specific Scripts -->
