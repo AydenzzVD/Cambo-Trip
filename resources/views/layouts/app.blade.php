@@ -125,7 +125,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript is loaded by @vite() in <head> -->
+  <!-- JavaScript is loaded by Vite in <head> -->
 
   <!-- Flash Notification Toasts -->
   @if (session('success'))
