@@ -59,9 +59,16 @@ button { cursor: pointer; font-family: var(--font-main); border: none; outline: 
 }
 
 /* ── Navbar ───────────────────────────────────────────────── */
+#navbar-placeholder {
+  height: var(--nav-h);
+}
+
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   display: flex;
   align-items: center;
