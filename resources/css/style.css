@@ -132,8 +132,15 @@ button { cursor: pointer; font-family: var(--font-main); border: none; outline: 
   background: rgba(74, 155, 155, 0.10);
 }
 
+/* On desktop, .nav-menu is invisible to layout — its children
+   participate directly in the .navbar flex row. */
+.nav-menu {
+  display: contents;
+}
+
 .nav-actions {
   display: flex;
+  align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
@@ -1582,7 +1589,9 @@ button { cursor: pointer; font-family: var(--font-main); border: none; outline: 
 
 @media (max-width: 768px) {
   .navbar { padding: 0 20px; }
-  .nav-links {
+
+  /* ── Mobile Menu Drawer ──────────────────────────────────── */
+  .nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -1592,11 +1601,35 @@ button { cursor: pointer; font-family: var(--font-main); border: none; outline: 
     padding: 16px 24px;
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-md);
+  }
+  .nav-menu.open { display: flex; }
+
+  .nav-toggle { display: flex; }
+
+  /* Links stack vertically inside the drawer */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    flex: none;
     gap: 6px;
   }
-  .nav-links.open { display: flex; }
-  .nav-toggle { display: flex; }
-  .nav-actions { display: none; }
+
+  /* Auth actions stack below the links with a separator */
+  .nav-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-top: 16px;
+    margin-top: 12px;
+    border-top: 1px solid var(--color-border);
+  }
+  .nav-actions .user-name {
+    text-align: center;
+    margin-right: 0 !important;
+  }
+  .nav-actions form { display: block !important; }
+  .nav-actions .btn { width: 100%; text-align: center; }
 
   .hero-dual { grid-template-columns: 1fr; margin: 16px 20px; height: 300px; }
   .hero-dual .hero-img:last-child { display: none; }

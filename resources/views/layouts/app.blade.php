@@ -17,30 +17,32 @@
         <img src="{{ asset('images/logo.png') }}" alt="CamboTrips Logo" class="logo-img" />
         <span class="logo-text">CamboTrips</span>
       </a>
-      <div class="nav-links">
-        <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Home</a>
-        <a href="{{ route('destination.index') }}" class="nav-link {{ Route::is('destination.*') ? 'active' : '' }}">Destination</a>
-        <a href="{{ route('explore') }}" class="nav-link {{ Route::is('explore') ? 'active' : '' }}">Explore</a>
-        <a href="{{ route('search') }}" class="nav-link {{ Route::is('search') ? 'active' : '' }}">Search</a>
-      </div>
-      <div class="nav-actions" style="display: flex; align-items: center; gap: 10px;">
-        @auth
-          @if(auth()->user()->is_admin)
-            <a href="{{ route('admin.dashboard') }}" class="btn btn-outline" style="border-color: var(--color-accent2); color: var(--color-accent2); font-weight: 600;">🛠️ Admin Panel</a>
-          @endif
-          <span class="user-name" style="font-weight: 500; font-size: 0.9rem; color: var(--color-dark); margin-right: 12px; display: inline-block;">👋 {{ auth()->user()->name }}</span>
-          <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-            @csrf
-            <button type="submit" class="btn btn-outline" style="cursor: pointer; padding: 8px 16px;">Logout</button>
-          </form>
-        @else
-          <a href="{{ route('login') }}" class="btn btn-outline">Login</a>
-          <a href="{{ route('signup') }}" class="btn btn-dark">Sign Up</a>
-        @endauth
-      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-links">
+          <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}">Home</a>
+          <a href="{{ route('destination.index') }}" class="nav-link {{ Route::is('destination.*') ? 'active' : '' }}">Destination</a>
+          <a href="{{ route('explore') }}" class="nav-link {{ Route::is('explore') ? 'active' : '' }}">Explore</a>
+          <a href="{{ route('search') }}" class="nav-link {{ Route::is('search') ? 'active' : '' }}">Search</a>
+        </div>
+        <div class="nav-actions">
+          @auth
+            @if(auth()->user()->is_admin)
+              <a href="{{ route('admin.dashboard') }}" class="btn btn-outline" style="border-color: var(--color-accent2); color: var(--color-accent2); font-weight: 600;">🛠️ Admin Panel</a>
+            @endif
+            <span class="user-name" style="font-weight: 500; font-size: 0.9rem; color: var(--color-dark); margin-right: 12px; display: inline-block;">👋 {{ auth()->user()->name }}</span>
+            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+              @csrf
+              <button type="submit" class="btn btn-outline" style="cursor: pointer; padding: 8px 16px;">Logout</button>
+            </form>
+          @else
+            <a href="{{ route('login') }}" class="btn btn-outline">Login</a>
+            <a href="{{ route('signup') }}" class="btn btn-dark">Sign Up</a>
+          @endauth
+        </div>
+      </div>
     </nav>
   </div>
 

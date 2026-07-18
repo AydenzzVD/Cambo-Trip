@@ -94,15 +94,15 @@ window.showToast = showToast;
 // ── Navbar mobile toggle ──────────────────────────────────────
 // Safe to call multiple times — clones the button to wipe old listeners.
 function setupNavbarToggle() {
-  const toggle    = document.getElementById('navToggle');
-  const navLinks  = document.querySelector('.nav-links');
-  if (!toggle || !navLinks) return;
+  const toggle  = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (!toggle || !navMenu) return;
 
   const fresh = toggle.cloneNode(true);
   toggle.replaceWith(fresh);
 
   fresh.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    navMenu.classList.toggle('open');
     fresh.classList.toggle('open');
   });
 }
@@ -216,9 +216,10 @@ function navigateTo(url, addToHistory = true) {
 
       // Auto-close mobile navigation menu if open on page swap
       const toggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
       if (toggle && toggle.classList.contains('open')) {
         toggle.classList.remove('open');
-        if (curLinks) curLinks.classList.remove('open');
+        if (navMenu) navMenu.classList.remove('open');
       }
 
       // Push history
