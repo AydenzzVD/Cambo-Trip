@@ -106,6 +106,7 @@ class AdminPanelTest extends TestCase
             'id' => 'angkor-wat',
             'name' => 'Angkor Wat',
             'province_id' => 'siem-reap',
+            'category' => 'Culture',
             'tagline' => 'A beautiful temple',
             'image' => 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a',
             'location' => 'Siem Reap City',
@@ -139,6 +140,7 @@ class AdminPanelTest extends TestCase
         $updateData = [
             'name' => 'Angkor Wat Updated',
             'province_id' => 'siem-reap',
+            'category' => 'Culture',
             'tagline' => 'A beautiful temple Updated',
             'image' => 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a',
             'location' => 'Siem Reap City Updated',

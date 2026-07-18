@@ -50,10 +50,6 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; font-family: var(--font-main); border: none; outline: none; }
 
-/* ── Page Transition ──────────────────────────────────────── */
-/* Removed: page-enter / page-enter-active animations were causing
-   a flash on every navigation AND breaking position:fixed on the
-   navbar (transform on <body> creates a new containing block). */
 
 /* ── Navbar ───────────────────────────────────────────────── */
 #navbar-placeholder {

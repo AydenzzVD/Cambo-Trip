@@ -47,6 +47,25 @@
 // ── State ─────────────────────────────────────────────────────
 let _spaInitialised = false;
 let _navigating     = false;
+const _prefetches   = new Map();
+
+// Helper to prefetch a URL and cache its promise
+function prefetchRoute(url) {
+  if (_prefetches.has(url)) return;
+
+  const promise = fetch(url, { headers: { 'X-SPA-Request': '1' } })
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.text();
+    })
+    .catch(err => {
+      _prefetches.delete(url);
+      throw err;
+    });
+
+  _prefetches.set(url, promise);
+}
+
 
 // ── Toast ─────────────────────────────────────────────────────
 function showToast(message, type = 'success') {
@@ -136,17 +155,22 @@ function navigateTo(url, addToHistory = true) {
 
   _navigating = true;
 
+  // Cache selectors for existing layout nodes that will be updated
   const appContent = document.getElementById('app-content');
-  if (appContent) {
-    appContent.style.transition = 'opacity 0.15s ease';
-    appContent.style.opacity    = '0.4';
-  }
+  const curLinks   = document.querySelector('.nav-links');
+  const curActions = document.querySelector('.nav-actions');
 
-  fetch(url, { headers: { 'X-SPA-Request': '1' } })
+  // Use prefetch promise if available, otherwise fetch on demand
+  const fetchPromise = _prefetches.get(url) || fetch(url, { headers: { 'X-SPA-Request': '1' } })
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
-    })
+    });
+
+  // Consume the prefetch promise from the map
+  _prefetches.delete(url);
+
+  fetchPromise
     .then(html => {
       const parser = new DOMParser();
       const doc    = parser.parseFromString(html, 'text/html');
@@ -179,19 +203,23 @@ function navigateTo(url, addToHistory = true) {
 
       // Swap main content
       if (appContent) {
-        appContent.innerHTML   = newContent.innerHTML;
-        appContent.style.opacity = '1';
+        appContent.innerHTML = newContent.innerHTML;
       }
 
       // Swap nav-links (active class update)
-      const curLinks = document.querySelector('.nav-links');
       const newLinks = doc.querySelector('.nav-links');
       if (curLinks && newLinks) curLinks.innerHTML = newLinks.innerHTML;
 
       // Swap nav-actions (auth state)
-      const curActions = document.querySelector('.nav-actions');
       const newActions = doc.querySelector('.nav-actions');
       if (curActions && newActions) curActions.innerHTML = newActions.innerHTML;
+
+      // Auto-close mobile navigation menu if open on page swap
+      const toggle = document.getElementById('navToggle');
+      if (toggle && toggle.classList.contains('open')) {
+        toggle.classList.remove('open');
+        if (curLinks) curLinks.classList.remove('open');
+      }
 
       // Push history
       if (addToHistory) history.pushState({ url }, doc.title, url);
@@ -199,22 +227,14 @@ function navigateTo(url, addToHistory = true) {
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'instant' });
 
-      // Re-attach navbar toggle (button was replaced by innerHTML swap above)
-      setupNavbarToggle();
-
       // Run page-specific inline scripts from the NEW content only
       runInlineScripts(newContent);
-
-
     })
     .catch(err => {
       console.error('[SPA] Navigation failed:', err);
-      if (appContent) appContent.style.opacity = '1';
       showToast('Page could not be loaded. Please try again.', 'error');
     })
     .finally(() => {
-      // ALWAYS restore opacity — prevents the "frozen/dimmed" state
-      if (appContent) appContent.style.opacity = '1';
       _navigating = false;
     });
 }
@@ -318,7 +338,29 @@ function initApp() {
     navigateTo(target, false);
   });
 
+  // ── Conservative prefetch on hover (desktop only) ─────────
+  document.addEventListener('mouseover', e => {
+    // Check if device supports hover
+    if (window.matchMedia('(hover: none)').matches) return;
 
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+
+    try {
+      const url = new URL(link.getAttribute('href'), window.location.href);
+      if (url.origin !== window.location.origin) return;
+
+      // Limit prefetching strictly to important public entry points
+      const pathname = url.pathname;
+      const isPrefetchable = pathname === '/' || pathname === '/destination' || pathname === '/explore';
+      if (!isPrefetchable) return;
+
+      // Skip current page and standalone routes
+      if (url.href === window.location.href || isStandaloneRoute(pathname)) return;
+
+      prefetchRoute(url.href);
+    } catch (_) {}
+  }, { passive: true });
 }
 
 // ── Bootstrap ─────────────────────────────────────────────────
